@@ -1,0 +1,12 @@
+#playBtnQuiz:hover {
+    /* Efek hover yang Anda inginkan */
+    -fx-background-color: blue; /* Ganti warna latar belakang saat dihover */
+    -fx-text-fill: white; /* Ganti warna teks saat dihover */
+    -fx-font-weight: bold; /* Atur teks menjadi bold saat dihover */
+}
+
+
+/* styles.css */
+.progress-bar {
+    -fx-accent:  #5C8374; /* Ganti dengan warna yang Anda inginkan */
+}
