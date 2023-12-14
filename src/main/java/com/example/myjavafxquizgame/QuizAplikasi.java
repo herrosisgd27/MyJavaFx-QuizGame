@@ -15,11 +15,13 @@ public class QuizAplikasi extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(QuizAplikasi.class.getResource("home.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        UI ui = new UI();
         stage.setTitle("Quiz Game!");
         stage.setScene(scene);
         stage.initStyle(StageStyle.TRANSPARENT);
         scene.setFill(Color.TRANSPARENT);
         stage.show();
+        ui.setUpMouseListeners(scene,stage);
 
     }
 
