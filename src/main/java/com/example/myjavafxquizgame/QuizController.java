@@ -27,11 +27,8 @@ public class QuizController {
 
     @FXML
     private void initialize(){
-
         hoverButton();
-
         soal();
-
     }
 
     private void hoverButton(){
@@ -63,7 +60,7 @@ public class QuizController {
     }
 
     Random rdm = new Random();
-    int index1 = rdm.nextInt(3);
+    int index1;
     private void soal() {
 //        while(counter >= 10){
 
@@ -71,6 +68,7 @@ public class QuizController {
         System.out.println("ini salah : " + salah);
         System.out.println(counter);
         if (counter == 1){
+            index1 = rdm.nextInt(50);
             ubahUkuranTombol();
             arab.setText("");
             pertanyaan.setText(aqidah.question[index1]);
@@ -78,8 +76,8 @@ public class QuizController {
             opt2.setText(aqidah.option[index1][1]);
             opt3.setText(aqidah.option[index1][2]);
             opt4.setText(aqidah.option[index1][3]);
-
         }else if(counter == 2){
+            index1 = rdm.nextInt(50);
             tombolDefault();
             arab.setText("");
             pertanyaan.setText(aqidah.question[index1]);
@@ -88,6 +86,15 @@ public class QuizController {
             opt3.setText(aqidah.option[index1][2]);
             opt4.setText(aqidah.option[index1][3]);
         }else if(counter == 3){
+            index1 = rdm.nextInt(50);
+            arab.setText("");
+            pertanyaan.setText(aqidah.question[index1]);
+            opt1.setText(aqidah.option[index1][0]);
+            opt2.setText(aqidah.option[index1][1]);
+            opt3.setText(aqidah.option[index1][2]);
+            opt4.setText(aqidah.option[index1][3]);
+        } else if(counter == 4){
+            index1 = rdm.nextInt(50);
             arab.setText("");
             pertanyaan.setText(aqidah.question[index1]);
             opt1.setText(aqidah.option[index1][0]);
@@ -151,7 +158,10 @@ public class QuizController {
             return jawaban.equals(aqidah.answer[index1]);
         }else if(counter == 3){
             return jawaban.equals(aqidah.answer[index1]);
+        }else if(counter == 4){
+            return jawaban.equals(aqidah.answer[index1]);
         }
+
 
         return false;
     }
@@ -165,7 +175,7 @@ public class QuizController {
             salah +=1;
         }
 
-        if ( counter == 3){
+        if ( counter == 4){
 
             try {
                 Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
@@ -228,7 +238,7 @@ public class QuizController {
             salah +=1;
         }
 
-        if ( counter == 3){
+        if ( counter == 4){
 
             try {
                 Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
@@ -262,7 +272,7 @@ public class QuizController {
             salah +=1;
         }
 
-        if ( counter == 3){
+        if ( counter == 4){
 
             try {
                 Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
