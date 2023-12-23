@@ -1,6 +1,6 @@
 package com.example.myjavafxquizgame;
 
-public class Aqidah extends Soal{
+public class Aqidah{
     String [][] option = {
             {"4", "5", "6", "7"},
             {"1", "2", "3", "4"},
@@ -163,6 +163,5 @@ public class Aqidah extends Soal{
             "Merajai",
             "Bijaksana",
             "Adil"
-
     };
 }
