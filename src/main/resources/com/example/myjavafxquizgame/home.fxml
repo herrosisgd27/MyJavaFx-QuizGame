@@ -1,27 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="myLabel" prefHeight="442.0" prefWidth="690.0" style="-fx-background-color: #092635; -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxquizgame.HomeController">
-   <children>
-      <Label alignment="CENTER" layoutX="134.0" layoutY="89.0" prefHeight="112.0" prefWidth="422.0" style="-fx-background-color: #5C8374; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: brown;" text="Quiz Islam" textAlignment="CENTER" textFill="#9ec8b9" wrapText="true">
+
+<AnchorPane fx:id="myLabel" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2C3E50;"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.myjavafxquizgame.HomeController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="325.0" layoutX="70.0" layoutY="79.0" stroke="BLACK"
+              strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="595.0">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <fill>
+         <LinearGradient endX="0.049242427854826895" endY="0.9507575865947839" startX="0.04924242695172628">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.18039216101169586" green="0.800000011920929" blue="0.4431372582912445"/>
+                  </color>
+               </Stop>
+               <Stop offset="0.006729475100942127">
+                  <color>
+                     <Color red="0.18039216101169586" green="0.800000011920929" blue="0.4431372582912445"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.18400000035762787" green="0.800000011920929" blue="0.44066667556762695"
+                            opacity="0.26139816641807556"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+   <Circle fill="WHITE" layoutX="557.0" layoutY="295.0" opacity="0.08" radius="133.0" stroke="BLACK" strokeType="INSIDE"
+           strokeWidth="0.0"/>
+   <Circle fill="WHITE" layoutX="126.0" layoutY="70.0" opacity="0.08" radius="162.0" stroke="BLACK" strokeType="INSIDE"
+           strokeWidth="0.0"/>
+   <Circle fill="#f1c40f" layoutX="156.0" layoutY="309.0" opacity="0.7" radius="141.0" stroke="BLACK"
+           strokeType="INSIDE" strokeWidth="0.0"/>
+   <Circle fill="#8e44ad" layoutX="593.0" layoutY="91.0" opacity="0.7" radius="141.0" stroke="BLACK" strokeType="INSIDE"
+           strokeWidth="0.0"/>
+   <Group layoutX="155.0" layoutY="79.0">
+      <Label alignment="CENTER" layoutX="2.0" prefHeight="112.0" prefWidth="422.0" text="Quiz" textAlignment="CENTER"
+             wrapText="true">
          <font>
-            <Font name="Berlin Sans FB Bold" size="43.0" />
+            <Font name="Berlin Sans FB Bold" size="96.0"/>
          </font>
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
          </padding>
+         <effect>
+            <DropShadow height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0">
+               <color>
+                  <Color red="0.6078431606292725" green="0.3490196168422699" blue="0.7137255072593689"/>
+               </color>
+            </DropShadow>
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0"/>
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943"/>
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Button fx:id="playBtnQuiz" layoutX="237.0" layoutY="301.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: #5C8374; -fx-background-radius: 32px; -fx-border-radius: 32px; -fx-border-color: brown;" text="Play" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="-13.0" layoutY="85.0" prefHeight="112.0" prefWidth="448.0" text="Islami"
+             textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Bell MT" size="28.0" />
+            <Font name="Berlin Sans FB Bold" size="96.0"/>
          </font>
-      </Button>
-      <ProgressBar fx:id="proses" layoutX="226.0" layoutY="234.0" prefHeight="44.0" prefWidth="237.0" progress="0" style="-fx-background-radius: 32px; -fx-border-radius: 20px; -fx-background-color: red; -fx-border-color: brown;" />
-   </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <effect>
+            <DropShadow height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0">
+               <color>
+                  <Color red="0.6078431606292725" green="0.3490196168422699" blue="0.7137255072593689"/>
+               </color>
+            </DropShadow>
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0"/>
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943"/>
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ButtonBar layoutX="324.0" layoutY="14.0" prefHeight="40.0" prefWidth="0.0"/>
+   </Group>
+   <Button fx:id="playBtnQuiz" layoutX="297.0" layoutY="323.0" mnemonicParsing="false" prefHeight="51.0"
+           prefWidth="141.0" style="-fx-background-color: #5C8374; -fx-background-radius: 28px;" text="START"
+           textFill="WHITE">
+      <font>
+         <Font name="Calibri Bold" size="28.0"/>
+      </font>
+   </Button>
 </AnchorPane>

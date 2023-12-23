@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
@@ -25,6 +26,9 @@ public class HomeController {
 
     @FXML
     private Button playBtnQuiz;
+
+    @FXML
+    private AnchorPane myLabel;
 
 //    @FXML
 //    private void initialize() {
@@ -50,9 +54,12 @@ public class HomeController {
 
     @FXML
     private void initialize() {
-        String css;
-        css = getClass().getResource("/CSS/style.css").toExternalForm();
-        proses.getStylesheets().add(css);
+//        String css;
+//        css = getClass().getResource("/CSS/style.css").toExternalForm();
+//        proses.getStylesheets().add(css);
+//        myLabel.getStylesheets().add(css);
+//        myLabel.getStyleClass().add("myLabel");
+
 
         playBtnQuiz.setOnMouseEntered(e -> {
             playBtnQuiz.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
@@ -78,7 +85,7 @@ public class HomeController {
 
         }).start();
 
-        playBtnQuiz.setVisible(false);
+//        playBtnQuiz.setVisible(false);
 
         playBtnQuiz.setOnAction(event ->openQuizStage());
 

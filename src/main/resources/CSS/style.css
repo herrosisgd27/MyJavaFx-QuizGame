@@ -10,3 +10,9 @@
 .progress-bar {
     -fx-accent:  #5C8374; /* Ganti dengan warna yang Anda inginkan */
 }
+
+.myLabel{
+    -fx-border-radius: 50px;
+    -fx-background-color: linear-gradient(180deg, #2ECC71 0%, rgba(46, 204, 113, 0.21) 50%);
+
+}
