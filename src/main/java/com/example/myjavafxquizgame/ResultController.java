@@ -1,43 +1,55 @@
 package com.example.myjavafxquizgame;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
 public class ResultController {
     QuizController quiz = new QuizController();
     @FXML
-    public Label remark, marks, markstext, benartext, salahtext;
+    public Label pesan, marksbenar, markssalah, markstext, nilai_maksimum, nilai;
+
+    public Text benartext, salahtext;
     @FXML
     public ProgressIndicator benar_progress, salah_progress;
 
-    int nilaiCounter = quiz.getCounter();
+    @FXML
+    public Rectangle marks_benar,marks_salah, lanjut,keluar;
 
+    int nilaiCounter = quiz.getCounter();
+    static int maks = 100;
+    int bobot;
     @FXML
     private void initialize(){
-        benartext.setText(String.valueOf("Jawaban benar : "+QuizController.benar));
-        salahtext.setText(String.valueOf("Jawaban salah : "+QuizController.salah));
+//        benartext.setText(String.valueOf("benar : "+QuizController.benar));
+//        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
+
         System.out.println(quiz.counter);
-        marks.setText(QuizController.benar + "/" + nilaiCounter);
+        marksbenar.setText(QuizController.benar + "/" + nilaiCounter);
+        markssalah.setText(QuizController.salah + "/" + nilaiCounter);
+        nilai.setText(String.valueOf(QuizController.benar * 25));
+//        float benarr =  (float) QuizController.benar/nilaiCounter;
+//        benar_progress.setProgress(benarr);
+//
+//        float salahh =  (float) QuizController.salah/nilaiCounter;
+//        salah_progress.setProgress(salahh);
+        nilai_maksimum.setText("dari " + maks);
 
-        float benarr =  (float) QuizController.benar/nilaiCounter;
-        benar_progress.setProgress(benarr);
-
-        float salahh =  (float) QuizController.salah/nilaiCounter;
-        salah_progress.setProgress(salahh);
-
-        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
+//        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
 
         int benar = QuizController.benar;
 
         if(benar <= 1){
-            remark.setText("NT bang");
+            pesan.setText("NT bang");
         }else if(benar == 2){
-            remark.setText("Tingkatin lagi bang, belajarnya");
+            pesan.setText("Tingkatin lagi bang, belajarnya");
         }else if(benar == 3){
-            remark.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
         }else if(benar == quiz.counter){
-            remark.setText("Busett, GG bang!!!");
+            pesan.setText("Busett, GG bang!!!");
         }
 
     }
