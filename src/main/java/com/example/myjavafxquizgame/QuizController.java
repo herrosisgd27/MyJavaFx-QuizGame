@@ -10,7 +10,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.Random;
+
 public class QuizController {
+    Aqidah aqidah = new Aqidah();
     @FXML
     public Label arab,pertanyaan;
 
@@ -24,11 +27,8 @@ public class QuizController {
 
     @FXML
     private void initialize(){
-
         hoverButton();
-
         soal();
-
     }
 
     private void hoverButton(){
@@ -59,44 +59,48 @@ public class QuizController {
         });
     }
 
+    Random rdm = new Random();
+    int index1;
     private void soal() {
 //        while(counter >= 10){
 
-        System.out.println("ini benar : "+benar);
+        System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
         System.out.println(counter);
         if (counter == 1){
+            index1 = rdm.nextInt(50);
             ubahUkuranTombol();
-            arab.setText("بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ ");
-            pertanyaan.setText(counter+". apa arti dari arab di atas");
-            opt1.setText("Dengan nama Allah Yang Maha Pengasih\nlagi Maha Penyayang");
-            opt2.setText("Allah maha mengetahui");
-            opt3.setText("Allah maha mendengar");
-            opt4.setText("Tiada tuhan selain Allah");
-
+            arab.setText("");
+            pertanyaan.setText(aqidah.question[index1]);
+            opt1.setText(aqidah.option[index1][0]);
+            opt2.setText(aqidah.option[index1][1]);
+            opt3.setText(aqidah.option[index1][2]);
+            opt4.setText(aqidah.option[index1][3]);
         }else if(counter == 2){
+            index1 = rdm.nextInt(50);
             tombolDefault();
             arab.setText("");
-            pertanyaan.setText(counter+". Arti fana adalah ");
-            opt1.setText("selalu");
-            opt2.setText("sementara");
-            opt3.setText("kekal");
-            opt4.setText("tidak ada akhir");
+            pertanyaan.setText(aqidah.question[index1]);
+            opt1.setText(aqidah.option[index1][0]);
+            opt2.setText(aqidah.option[index1][1]);
+            opt3.setText(aqidah.option[index1][2]);
+            opt4.setText(aqidah.option[index1][3]);
         }else if(counter == 3){
+            index1 = rdm.nextInt(50);
             arab.setText("");
-            pertanyaan.setText(counter+". perilaku manusia yang baik berarti");
-            opt1.setText("Moralitas tercela");
-            opt2.setText("karakter terpuji");
-            opt3.setText("Ibadah");
-            opt4.setText("Moralitas");
-        }else if(counter == 4){
-            ubahUkuranTombol();
-            arab.setText("آ أَعْبُدُ مَا تَعْبُدُونَ  ");
-            pertanyaan.setText(counter+". perhatikan surat al-kafirun ayat 2 di atas.sikap yang sesuai dengan ayat diatas adalah");
-            opt1.setText("Seorang muslim tidak akan kerjasama\ndengan pemeluk agama lain");
-            opt2.setText("Seorang muslim dilarang mengunjungi\ntempat ibadah agama lain");
-            opt3.setText("Ajaran yang paling benar adalah Islam");
-            opt4.setText("Seorang muslim tidak akan menyembah\n Tuhan selain Allah");
+            pertanyaan.setText(aqidah.question[index1]);
+            opt1.setText(aqidah.option[index1][0]);
+            opt2.setText(aqidah.option[index1][1]);
+            opt3.setText(aqidah.option[index1][2]);
+            opt4.setText(aqidah.option[index1][3]);
+        } else if(counter == 4){
+            index1 = rdm.nextInt(50);
+            arab.setText("");
+            pertanyaan.setText(aqidah.question[index1]);
+            opt1.setText(aqidah.option[index1][0]);
+            opt2.setText(aqidah.option[index1][1]);
+            opt3.setText(aqidah.option[index1][2]);
+            opt4.setText(aqidah.option[index1][3]);
         }
 //        counter++;
 //        }
@@ -149,14 +153,15 @@ public class QuizController {
     boolean cekJawaban(String jawaban) {
 
         if(counter == 1 ){
-            return jawaban.equals("Dengan nama Allah Yang Maha Pengasih\nlagi Maha Penyayang");
+            return jawaban.equals(aqidah.answer[index1]);
         }else if(counter == 2){
-            return jawaban.equals("sementara");
+            return jawaban.equals(aqidah.answer[index1]);
         }else if(counter == 3){
-            return jawaban.equals("karakter terpuji");
+            return jawaban.equals(aqidah.answer[index1]);
         }else if(counter == 4){
-            return jawaban.equals("Seorang muslim tidak akan menyembah\n Tuhan selain Allah");
+            return jawaban.equals(aqidah.answer[index1]);
         }
+
 
         return false;
     }
