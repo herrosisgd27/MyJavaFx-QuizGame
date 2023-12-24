@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class QuizController {
+public class QuizController extends Hover{
     @FXML
     public Label arab,pertanyaan;
 
@@ -22,42 +22,45 @@ public class QuizController {
     static int salah = 0;
     boolean ulang = true;
 
+
+
     @FXML
     private void initialize(){
 
-        hoverButton();
+        addHoverEffectQuiz(opt1,opt2,opt3,opt4);
+
 
         soal();
 
     }
 
-    private void hoverButton(){
-        opt1.setOnMouseEntered(e ->{
-            opt1.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
-        });
-        opt2.setOnMouseEntered(e ->{
-            opt2.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
-        });
-        opt3.setOnMouseEntered(e ->{
-            opt3.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
-        });
-        opt4.setOnMouseEntered(e ->{
-            opt4.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
-        });
-
-        opt1.setOnMouseExited(e ->{
-            opt1.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
-        });
-        opt2.setOnMouseExited(e ->{
-            opt2.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
-        });
-        opt3.setOnMouseExited(e ->{
-            opt3.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
-        });
-        opt4.setOnMouseExited(e ->{
-            opt4.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
-        });
-    }
+//    private void hoverButton(){
+//        opt1.setOnMouseEntered(e ->{
+//            opt1.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
+//        });
+//        opt2.setOnMouseEntered(e ->{
+//            opt2.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
+//        });
+//        opt3.setOnMouseEntered(e ->{
+//            opt3.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
+//        });
+//        opt4.setOnMouseEntered(e ->{
+//            opt4.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
+//        });
+//
+//        opt1.setOnMouseExited(e ->{
+//            opt1.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
+//        });
+//        opt2.setOnMouseExited(e ->{
+//            opt2.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
+//        });
+//        opt3.setOnMouseExited(e ->{
+//            opt3.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
+//        });
+//        opt4.setOnMouseExited(e ->{
+//            opt4.setStyle("-fx-background-color: #5C8374; -fx-background-radius : 32px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
+//        });
+//    }
 
     private void soal() {
 //        while(counter >= 10){
