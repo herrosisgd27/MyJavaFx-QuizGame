@@ -64,7 +64,23 @@ public class Hover {
             text4.setFill(Paint.valueOf("#ffffff"));
             button4.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333;");
         });
+
+        button4.setOnMouseEntered(e -> {
+            button4.setEffect(shadow);
+            bulat4.setFill(Paint.valueOf("#ffffff"));
+            text4.setFill(Paint.valueOf("#3498db"));
+            button4.setStyle("-fx-background-color: #3498db; -fx-background-radius :  18px; -fx-border-radius :  18px; -fx-text-fill: #fffffff;");
+        });
+        button4.setOnMouseExited(e -> {
+            button4.setEffect( shadow);
+            bulat4.setFill(Paint.valueOf("#3498db"));
+            text4.setFill(Paint.valueOf("#ffffff"));
+            button4.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333;");
+        });
     }
+
+
+
 
     public static void addHoverEffectKategori(Button button1, Button button2, Button button3, Button button4) {
         DropShadow shadow = new DropShadow();
