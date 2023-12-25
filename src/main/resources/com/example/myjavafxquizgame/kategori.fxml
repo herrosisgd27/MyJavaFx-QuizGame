@@ -61,7 +61,7 @@
         </Label>
       <Group accessibleRole="BUTTON" layoutX="62.900001525878906" layoutY="172.89999389648438">
          <children>
-            <Button fx:id="fiqih" alignment="CENTER" contentDisplay="RIGHT" layoutX="4.099998474121094" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #e74c3c;" text="Fiqih" textFill="WHITE">
+            <Button fx:id="fiqih" alignment="CENTER" contentDisplay="RIGHT" layoutX="4.099998474121094" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #e74c3c;" text="Fiqih" textAlignment="RIGHT" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
