@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
@@ -83,25 +85,7 @@
       </Circle>
       <Rectangle fx:id="marks_benar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="188.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
       <Rectangle fx:id="marks_salah" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="246.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
-      <Rectangle fx:id="lanjut" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#2ecc71" height="42.0" layoutX="358.0" layoutY="309.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="114.0">
-         <effect>
-            <DropShadow height="10.0" radius="4.5" width="10.0" />
-         </effect></Rectangle>
-      <Rectangle fx:id="keluar" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#e74c3c" height="42.0" layoutX="478.0" layoutY="309.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="114.0">
-         <effect>
-            <DropShadow height="10.0" radius="4.5" width="10.0" />
-         </effect></Rectangle>
       <Circle fill="WHITE" layoutX="116.0" layoutY="60.0" opacity="0.08" radius="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="390.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lanjut" wrappingWidth="48.53668212890625">
-         <font>
-            <Font name="Calibri Bold" size="18.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="511.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keluar" wrappingWidth="48.53668212890625">
-         <font>
-            <Font name="Calibri Bold" size="18.0" />
-         </font>
-      </Text>
       <Text fill="#e74c3c" layoutX="393.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salah" wrappingWidth="48.53668212890625">
          <font>
             <Font name="Calibri Bold" size="18.0" />
@@ -147,5 +131,27 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
+      <Button fx:id="lanjut" layoutX="358.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #2ecc71; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Lanjut" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="keluar" layoutX="477.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #e74c3c; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Keluar" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
