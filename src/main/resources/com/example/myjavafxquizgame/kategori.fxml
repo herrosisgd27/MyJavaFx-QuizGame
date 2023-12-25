@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
@@ -58,101 +59,129 @@
                 <Font name="System Bold" size="48.0" />
             </font>
         </Label>
-      <Button fx:id="fiqih" layoutX="67.0" layoutY="176.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 32px; -fx-background-color: #e74c3c;" textFill="#e74c3c">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-      </Button>
-        <Circle fill="WHITE" layoutX="116.0" layoutY="222.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-            <effect>
-                <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
-            </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-        </Circle>
-      <Button fx:id="tahsin" layoutX="356.0" layoutY="177.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 32px; -fx-background-color: #2ecc71;" textFill="#2ecc71">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-      </Button>
-      <Circle fill="WHITE" layoutX="405.0" layoutY="223.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-         <effect>
-            <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Button fx:id="aqidah" layoutX="67.0" layoutY="279.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 32px; -fx-background-color: #f1c40f;" textFill="#f1c40f">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-      </Button>
-      <Circle fill="WHITE" layoutX="116.0" layoutY="325.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-         <effect>
-            <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Button fx:id="sejarah" layoutX="356.0" layoutY="280.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 32px; -fx-background-color: #3498db;" textFill="#3498db">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-      </Button>
-      <Circle fill="WHITE" layoutX="405.0" layoutY="326.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-         <effect>
-            <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-        <Label fx:id="textFiqih" alignment="TOP_RIGHT" layoutX="179.0" layoutY="200.0" prefHeight="42.0" prefWidth="74.0" text="Fiqih">
-            <font>
-                <Font name="Calibri Bold" size="32.0" />
-            </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-        </Label>
-      <Label fx:id="textAqidah" alignment="CENTER_RIGHT" layoutX="171.0" layoutY="301.0" prefHeight="42.0" prefWidth="105.0" text="Aqidah" textAlignment="RIGHT" wrapText="true">
-         <font>
-            <Font name="Calibri Bold" size="32.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <Label fx:id="textTahsin" alignment="CENTER_RIGHT" layoutX="444.0" layoutY="202.0" prefHeight="42.0" prefWidth="106.0" text="  Tahsin">
-         <font>
-            <Font name="Calibri Bold" size="32.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <Label fx:id="TextSejarah" alignment="CENTER_RIGHT" layoutX="455.0" layoutY="303.0" prefHeight="42.0" prefWidth="105.0" text="Sejarah" textAlignment="RIGHT" wrapText="true">
-         <font>
-            <Font name="Calibri Bold" size="32.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
+      <Group accessibleRole="BUTTON" layoutX="62.900001525878906" layoutY="172.89999389648438">
+         <children>
+            <Button fx:id="fiqih" alignment="CENTER" contentDisplay="RIGHT" layoutX="4.099998474121094" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #e74c3c;" text="Fiqih" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Button>
+              <Label fx:id="textFiqih" alignment="CENTER" cacheShape="false" centerShape="false" layoutX="221.0" layoutY="36.0" prefHeight="42.0" prefWidth="74.0" scaleShape="false" style="-fx-text-fill: #ffffff;" text="Fiqih" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+                  <font>
+                      <Font name="Calibri Bold" size="32.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+              </Label>
+              <Circle fx:id="bulat1" disable="true" fill="WHITE" focusTraversable="true" layoutX="51.0" layoutY="48.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                  <effect>
+                      <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                  </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+              </Circle>
+         </children>
+      </Group>
+      <Group layoutX="351.8999938964844" layoutY="173.89999389648438">
+         <children>
+            <Button fx:id="tahsin" alignment="CENTER" layoutX="4.100006103515625" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #2ecc71;" text="Tahsin" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Button>
+            <Circle fx:id="bulat2" accessibleRole="BUTTON" disable="true" fill="WHITE" focusTraversable="true" layoutX="52.0" layoutY="48.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Label fx:id="textTahsin" alignment="CENTER" centerShape="false" contentDisplay="CENTER" focusTraversable="false" layoutX="92.10000610351562" layoutY="28.100006103515625" prefHeight="42.0" prefWidth="106.0" scaleShape="false" style="-fx-text-fill: #ffffff;" text="  Tahsin" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="62.900001525878906" layoutY="275.8999938964844">
+         <children>
+            <Button fx:id="aqidah" alignment="CENTER" layoutX="4.099998474121094" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #f1c40f;" text="Aqidah" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Button>
+            <Circle fx:id="bulat3" disable="true" fill="WHITE" focusTraversable="true" layoutX="50.0" layoutY="48.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Label fx:id="textAqidah" alignment="CENTER_RIGHT" cacheShape="false" focusTraversable="false" layoutX="108.0999984741211" layoutY="25.100006103515625" prefHeight="42.0" prefWidth="105.0" scaleShape="false" style="-fx-text-fill: #ffffff;" text="Aqidah" textAlignment="RIGHT" textFill="WHITE" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="351.8999938964844" layoutY="276.8999938964844">
+         <children>
+            <Button fx:id="sejarah" alignment="CENTER" layoutX="4.100006103515625" layoutY="3.100006103515625" mnemonicParsing="false" prefHeight="90.0" prefWidth="266.0" style="-fx-background-radius: 18px; -fx-background-color: #3498db;" text="Sejarah" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Button>
+            <Circle fx:id="bulat4" accessibleRole="BUTTON" disable="true" fill="WHITE" focusTraversable="true" layoutX="52.0" layoutY="47.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <InnerShadow height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Label fx:id="textSejarah" alignment="CENTER_RIGHT" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="103.10000610351562" layoutY="26.100006103515625" prefHeight="42.0" prefWidth="105.0" style="-fx-text-fill: #ffffff;" text="Sejarah" textAlignment="RIGHT" textFill="WHITE" visible="false" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Group>
     </children>
 </AnchorPane>
