@@ -20,17 +20,31 @@ public class ResultController {
     public Rectangle marks_benar,marks_salah, lanjut,keluar;
 
     int nilaiCounter = quiz.getCounter();
-    static int maks = 100;
+    int maks = nilaiCounter;
     int bobot;
     @FXML
     private void initialize(){
+        int benar = QuizController.benar;
+//        pesan.setText("HAHAHAH");
+        if(benar <= 2){
+            pesan.setText("NT bang");
+        }else if(benar >= 3 && benar <= 6){
+            pesan.setText("Tingkatin lagi bang, belajarnya");
+        }else if(benar >= 7){
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+        }else if(benar == quiz.counter){
+            pesan.setText("Busett, GG bang!!!");
+        }else{
+            pesan.setText("APA YANG SLAAH WOII");
+        }
+        nilai.setLayoutY(200);
 //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
 //        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
         System.out.println(quiz.counter);
         marksbenar.setText(QuizController.benar + "/" + nilaiCounter);
         markssalah.setText(QuizController.salah + "/" + nilaiCounter);
-        nilai.setText(String.valueOf(QuizController.benar * 25));
+        nilai.setText(String.valueOf(benar * 2));
 //        float benarr =  (float) QuizController.benar/nilaiCounter;
 //        benar_progress.setProgress(benarr);
 //
@@ -40,17 +54,9 @@ public class ResultController {
 
 //        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
 
-        int benar = QuizController.benar;
 
-        if(benar <= 1){
-            pesan.setText("NT bang");
-        }else if(benar == 2){
-            pesan.setText("Tingkatin lagi bang, belajarnya");
-        }else if(benar == 3){
-            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
-        }else if(benar == quiz.counter){
-            pesan.setText("Busett, GG bang!!!");
-        }
+
+
 
     }
 

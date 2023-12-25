@@ -1,7 +1,7 @@
 package com.example.myjavafxquizgame;
 
 public class Fikih {
-    String [][] option = {
+    static String [][] option = {
             {"Syahadat", "Haji", "Sholat", "Zakat"},
             {"Syahadat", "Haji", "Sholat", "Zakat"},
             {"Syahadat", "Haji", "Sholat", "Zakat"},
@@ -14,7 +14,7 @@ public class Fikih {
             {"4", "3", "5", "2"},
             //10
             {"15", "12", "17", "13"},
-            {"Aku bersaksi bahwa tidak ada Tuhan melainkan Allah. Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah", "Allah Maha Besar", "Dengan menyebut nama-Mu ya allah, aku berlindung dari godaan setan yang terkutuk", "Segala puji bagi allah tuhan semesta alam"},
+            {"Aku bersaksi bahwa tidak ada Tuhan melainkan Allah.\nDan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah", "Allah Maha Besar", "Dengan menyebut nama-Mu ya allah, aku berlindung dari godaan setan yang terkutuk", "Segala puji bagi allah tuhan semesta alam"},
             {"أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللهُ", "أَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهِ", "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهِ", "اللهُ أَكْبَرُ اللهُ أَكْبَرُ اللهُ أَكْبَرُ  "},
             {"Sunnah", "Haram", "Wajib", "Makruh"},
             {"Makan", "Haid", "Minum", "Kentut"},
@@ -59,7 +59,7 @@ public class Fikih {
             //50
     };
 
-    String [] question = {
+    static String [] question = {
             "Rukun Islam yang kelima adalah?",
             "Rukun Islam yang keempat adalah?",
             "Rukun islam yang pertama adalah?",
@@ -117,11 +117,11 @@ public class Fikih {
             //50
     };
 
-    String [] answer = {
+    static String [] answer = {
             "Haji", "Zakat", "Syahadat", "5", "5", "2", "4", "4", "3", "4",
             //10
             "17",
-            "Aku bersaksi bahwa tidak ada Tuhan melainkan Allah. Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah",
+            "Aku bersaksi bahwa tidak ada Tuhan melainkan Allah.\nDan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah",
             "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهِ",
             "Wajib",
             "Kentut",

@@ -171,7 +171,7 @@ public class HomeController {
                 Stage thisstage = (Stage) playBtnQuiz.getScene().getWindow();
                 thisstage.close();
 
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kategori.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("quiz.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);

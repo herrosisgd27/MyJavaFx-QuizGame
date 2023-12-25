@@ -129,19 +129,19 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="nilai" layoutX="158.0" layoutY="214.0" prefHeight="77.0" prefWidth="86.0" text="70" textFill="WHITE">
+      <Label fx:id="nilai" alignment="CENTER" layoutX="133.0" layoutY="207.0" prefHeight="118.0" prefWidth="135.0" text="70" textFill="WHITE">
          <font>
             <Font name="System Bold" size="72.0" />
          </font>
       </Label>
-      <Label fx:id="nilai_maksimum" layoutX="176.0" layoutY="308.0" prefHeight="18.0" prefWidth="49.0" text="dari 100" textFill="WHITE">
+      <Label fx:id="nilai_maksimum" layoutX="178.0" layoutY="308.0" prefHeight="18.0" prefWidth="49.0" text="dari 100" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="pesan" layoutX="192.0" layoutY="14.0" prefHeight="74.0" prefWidth="284.0" text="Hebat" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="pesan" alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="14.0" prefHeight="74.0" prefWidth="284.0" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Label>
    </children>
