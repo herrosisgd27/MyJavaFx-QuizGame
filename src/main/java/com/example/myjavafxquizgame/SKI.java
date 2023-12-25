@@ -1,7 +1,7 @@
 package com.example.myjavafxquizgame;
 
 public class SKI {
-    String [][] option = {
+    static String [][] option = {
             {"4", "5", "6", "3"},
             {"Ali bin Abi Thalib", "Abu Bakar Ash Shiddiq", "Utsman bin Affan", "Umar bin Khattab"},
             {"Ali bin Abi Thalib", "Abu Bakar Ash Shiddiq", "Utsman bin Affan", "Umar bin Khattab"},
@@ -63,7 +63,7 @@ public class SKI {
             {"1000", "500", "314", "341"}
     };
 
-    String [] question = {
+    static String [] question = {
             "Berapa jumlah Khulafaur Rasyidin?",
             "Siapa Khulafaur Rasyidin yang pertama?",
             "Siapa Khulafaur Rasyidin yang kedua?",
@@ -125,7 +125,7 @@ public class SKI {
             "Berapa jumlah pasukan kaum kafir quraisy dalam perang badar?"
     };
 
-    String [] answer = {
+    static String [] answer = {
             "4",
             "Abu Bakar Ash Shiddiq",
             "Umar bin Khattab",

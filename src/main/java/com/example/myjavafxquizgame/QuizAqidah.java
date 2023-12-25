@@ -6,29 +6,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.OverrunStyle;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.Random;
 
 
+public class QuizAqidah extends Hover {
+    String[][] options = Aqidah.option;
+    String[] questions = Aqidah.question;
+    String[] answers = Aqidah.answer;
+    Random random = new Random();
+    int index;
+//    Aqidah Aqidah = new Aqidah();
 
-public class QuizController extends Hover {
-//    Fikih fikih = new Fikih();
-//
-//    String[][] option = fikih.option;
-//    String[] question  = fikih.question;
-//    String[] answers = fikih.answer;
+//    String[][] option = Aqidah.option;
+//    String[] question  = Aqidah.question;
+//    String[] answers = Aqidah.answer;
     @FXML
-    private Text nomor,text1,text2,text3,text4;
-    String[][] options = Fikih.option;
-    String[] questions = Fikih.question;
-    String[] answers = Fikih.answer;
+    private Text nomor;
 
     @FXML
     public Label arab,pertanyaan;
@@ -36,12 +35,7 @@ public class QuizController extends Hover {
     @FXML
     public Button opt1,opt2,opt3,opt4;
 
-    @FXML
-    public Circle bulat1,bulat2,bulat3,bulat4;
-
-
-
-    static int counter = 0;
+    static int counter = 1;
     static int benar = 0;
     static int salah = 0;
     boolean ulang = true;
@@ -50,9 +44,8 @@ public class QuizController extends Hover {
 
     @FXML
     private void initialize(){
-        addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
+        addHoverEffectQuiz(opt1,opt2,opt3,opt4);
         soal();
-
     }
 
     private void soal() {
@@ -63,53 +56,40 @@ public class QuizController extends Hover {
             opt1.setFont(new Font("Arial Rounded MT Bold",15));
             opt3.setFont(new Font("Arial Rounded MT Bold",15));
         }
-            if (counter <= questions.length) {
-                nomor.setText(String.valueOf((counter +1)));
-                pertanyaan.setText( questions[counter]);
+            if (counter <= 20) {
+                index = random.nextInt(50);
+                nomor.setText(String.valueOf(counter));
+                pertanyaan.setText(questions[index]);
 
-                opt1.setText(options[counter][0]);
-                opt2.setText(options[counter][1]);
-                opt3.setText(options[counter][2]);
-                opt4.setText(options[counter][3]);
-
+                opt1.setText(options[index][0]);
+                opt2.setText(options[index][1]);
+                opt3.setText(options[index][2]);
+                opt4.setText(options[index][3]);
             }
-
-            System.out.println(questions[counter]);
-            System.out.println(answers[counter]);
-
+            System.out.println(questions[index]);
+            System.out.println(answers[index]);
 //        }
-
-        System.out.println("ini benar : "+benar);
+        System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
         System.out.println(counter);
-
-
     }
 
     boolean cekJawaban(String jawaban) {
-        return jawaban.equals(answers[counter]);
+        return jawaban.equals(answers[index]);
     }
 
     public int getCounter() {
         return counter;
     }
 
-    @FXML
-    private void opt1clik(ActionEvent actionEvent) {
-
-        if(cekJawaban(opt1.getText())){
-            benar += 1;
-        }else{
-            salah +=1;
-        }
-
-        if (counter < questions.length - 1) { // Cek apakah masih ada pertanyaan berikutnya
+    private void nextQuestion(ActionEvent actionEvent){
+        if (counter < 20) { // Cek apakah masih ada pertanyaan berikutnya
             counter++;
             soal(); // Tampilkan pertanyaan berikutnya
         } else {
             // Lakukan logika untuk menampilkan hasil atau melakukan sesuatu setelah selesai menjawab pertanyaan terakhir
             try {
-                counter++;
+//                counter++;
                 Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
                 thisstage.close();
 
@@ -125,9 +105,18 @@ public class QuizController extends Hover {
                 e.printStackTrace();
             }
         }
+    }
 
+    @FXML
+    private void opt1clik(ActionEvent actionEvent) {
 
+        if(cekJawaban(opt1.getText())){
+            benar += 1;
+        }else{
+            salah +=1;
+        }
 
+        nextQuestion(actionEvent);
     }
 
 
@@ -140,28 +129,7 @@ public class QuizController extends Hover {
             salah +=1;
         }
 
-        if (counter < questions.length - 1) { // Cek apakah masih ada pertanyaan berikutnya
-            counter++;
-            soal(); // Tampilkan pertanyaan berikutnya
-        } else {
-            // Lakukan logika untuk menampilkan hasil atau melakukan sesuatu setelah selesai menjawab pertanyaan terakhir
-            try {
-                counter++;
-                Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-                thisstage.close();
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initStyle(StageStyle.TRANSPARENT);
-                scene.setFill(Color.TRANSPARENT);
-
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        nextQuestion(actionEvent);
     }
 
     @FXML
@@ -173,28 +141,7 @@ public class QuizController extends Hover {
             salah +=1;
         }
 
-        if (counter < questions.length - 1) { // Cek apakah masih ada pertanyaan berikutnya
-            counter++;
-            soal(); // Tampilkan pertanyaan berikutnya
-        } else {
-            // Lakukan logika untuk menampilkan hasil atau melakukan sesuatu setelah selesai menjawab pertanyaan terakhir
-            try {
-                counter++;
-                Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-                thisstage.close();
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initStyle(StageStyle.TRANSPARENT);
-                scene.setFill(Color.TRANSPARENT);
-
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        nextQuestion(actionEvent);
     }
 
     @FXML
@@ -205,28 +152,8 @@ public class QuizController extends Hover {
             salah +=1;
         }
 
-        if (counter < questions.length - 1) { // Cek apakah masih ada pertanyaan berikutnya
-            counter++;
-            soal(); // Tampilkan pertanyaan berikutnya
-        } else {
-            // Lakukan logika untuk menampilkan hasil atau melakukan sesuatu setelah selesai menjawab pertanyaan terakhir
-            try {
-                counter++;
-                Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-                thisstage.close();
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initStyle(StageStyle.TRANSPARENT);
-                scene.setFill(Color.TRANSPARENT);
-
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        nextQuestion(actionEvent);
+    }
 
 //        if ( counter == 4){
 //
@@ -252,7 +179,7 @@ public class QuizController extends Hover {
 //            counter++;
 //            soal();
 //        }
-    }
+//    }
 
 //    private void tombolDefault(){
 //        opt1.setPrefWidth(211);
