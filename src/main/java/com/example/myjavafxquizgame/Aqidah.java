@@ -59,7 +59,7 @@ public class Aqidah{
             //50
             };
 
-    String [] question = {
+    static String [] question = {
             "Ada berapa rukun Iman?",
             "Percaya kepada Allah adalah rukun Iman ke...",
             "Percaya kepada Malaikat adalah rukun Iman ke...",
@@ -117,7 +117,7 @@ public class Aqidah{
             //50
     };
 
-    String [] answer = {
+    static String [] answer = {
             "6", "1", "2", "3", "4", "5", "6", "25", "Nabi Daud AS", "5",
             //10
             "10",
