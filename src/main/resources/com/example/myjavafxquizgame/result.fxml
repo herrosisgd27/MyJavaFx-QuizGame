@@ -47,46 +47,49 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="104.0" layoutY="-46.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50px; -fx-arc-width: 50px;" width="481.0">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+            <DropShadow height="10.0" offsetY="1.5" radius="4.5" width="10.0" />
          </effect>
       </Rectangle>
       <Circle fill="WHITE" layoutX="547.0" layoutY="285.0" opacity="0.08" radius="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="68.0" layoutY="167.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50px; -fx-arc-width: 50px;" width="554.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="68.0" layoutY="167.0" opacity="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50px; -fx-arc-width: 50px;" width="554.0">
+         <effect>
+            <DropShadow height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+         </effect></Rectangle>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="68.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50px; -fx-arc-width: 50px;" width="266.0">
          <fill>
-            <LinearGradient endY="1.0">
+            <LinearGradient endX="1.0" endY="0.015151500701904297" startY="0.636363679712469">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.5568627715110779" green="0.2666666805744171" blue="0.6784313917160034" />
+                        <Color red="0.22736841440200806" green="0.021052632480859756" blue="0.31578946113586426" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.30835089087486267" green="0.06994152069091797" blue="0.410526305437088" />
+                        <Color red="0.5568627715110779" green="0.2666666805744171" blue="0.6784313917160034" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </fill>
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+            <DropShadow blurType="TWO_PASS_BOX" height="10.0" offsetX="-1.0" offsetY="1.0" radius="4.5" width="10.0" />
          </effect>
       </Rectangle>
       <Circle fill="#8e44ad" layoutX="201.0" layoutY="267.0" radius="84.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
-            <InnerShadow blurType="TWO_PASS_BOX" height="30.0" offsetX="0.1" offsetY="-0.1" radius="14.5" width="30.0" />
+            <InnerShadow blurType="TWO_PASS_BOX" height="30.0" offsetX="-1.0" offsetY="1.0" radius="14.5" width="30.0" />
          </effect>
       </Circle>
-      <Rectangle fx:id="marks_benar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="188.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
-      <Rectangle fx:id="marks_salah" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="246.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
+      <Rectangle fx:id="marks_benar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="188.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
+      <Rectangle fx:id="marks_salah" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="360.0" layoutY="246.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="225.0" />
       <Rectangle fx:id="lanjut" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#2ecc71" height="42.0" layoutX="358.0" layoutY="309.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="114.0">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
          </effect></Rectangle>
       <Rectangle fx:id="keluar" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" fill="#e74c3c" height="42.0" layoutX="478.0" layoutY="309.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 25px; -fx-arc-width: 25px;" width="114.0">
          <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
          </effect></Rectangle>
       <Circle fill="WHITE" layoutX="116.0" layoutY="60.0" opacity="0.08" radius="162.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Text fill="WHITE" layoutX="390.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lanjut" wrappingWidth="48.53668212890625">
@@ -109,12 +112,12 @@
             <Font name="Calibri Bold" size="18.0" />
          </font>
       </Text>
-      <Circle fill="WHITE" layoutX="376.0" layoutY="210.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+      <Circle fill="WHITE" layoutX="376.0" layoutY="210.0" nodeOrientation="RIGHT_TO_LEFT" radius="8.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
             <InnerShadow blurType="TWO_PASS_BOX" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
          </effect>
       </Circle>
-      <Circle fill="WHITE" layoutX="376.0" layoutY="267.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+      <Circle fill="WHITE" layoutX="376.0" layoutY="267.0" nodeOrientation="RIGHT_TO_LEFT" radius="8.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
             <InnerShadow blurType="TWO_PASS_BOX" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
          </effect>
@@ -139,7 +142,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="pesan" alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="14.0" prefHeight="74.0" prefWidth="284.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="pesan" alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="14.0" prefHeight="110.0" prefWidth="303.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
