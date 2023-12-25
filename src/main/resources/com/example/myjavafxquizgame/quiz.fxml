@@ -13,6 +13,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxquizgame.QuizController">
    <children>
@@ -49,9 +50,9 @@
 <!--            <Font name="Times New Roman Bold" size="50.0" />-->
 <!--         </font>-->
 <!--      </Label>-->
-      <Button fx:id="opt1" alignment="BASELINE_LEFT" layoutX="67.0" layoutY="197.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="A. ">
+      <Button fx:id="opt1" alignment="BASELINE_LEFT" layoutX="53.0" layoutY="209.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="A. " wrapText="true">
          <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -70,9 +71,9 @@
             </Circle>
          </graphic>
       </Button>
-      <Button fx:id="opt2" alignment="BASELINE_LEFT" layoutX="364.0" layoutY="197.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="B. ">
+      <Button fx:id="opt2" alignment="BASELINE_LEFT" layoutX="364.0" layoutY="209.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="B. " wrapText="true">
          <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -91,9 +92,9 @@
             </Circle>
          </graphic>
       </Button>
-      <Button fx:id="opt3" alignment="BASELINE_LEFT" layoutX="67.0" layoutY="287.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="C. ">
+      <Button fx:id="opt3" alignment="BASELINE_LEFT" layoutX="53.0" layoutY="296.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="C. " wrapText="true">
          <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -112,9 +113,9 @@
             </Circle>
          </graphic>
       </Button>
-      <Button fx:id="opt4" alignment="BASELINE_LEFT" layoutX="364.0" layoutY="287.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="D. ">
+      <Button fx:id="opt4" alignment="BASELINE_LEFT" layoutX="364.0" layoutY="296.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="D. " wrapText="true">
          <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -139,14 +140,19 @@
          </effect>
       </Rectangle>
       <Circle fill="#9b59b6" layoutX="580.0" layoutY="66.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Label fx:id="pertanyaan" layoutX="135.0" layoutY="97.0" prefHeight="42.0" prefWidth="430.0" text="" textFill="#9fb3c9" wrapText="true">
-         <font>
-            <Font name="Bell MT" size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="arab" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="144.0" layoutY="14.0" prefHeight="104.0" prefWidth="392.0">
+      <Label fx:id="arab" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="144.0" layoutY="2.0" prefHeight="104.0" prefWidth="392.0">
          <font>
             <Font name="Times New Roman Bold Italic" size="39.0" />
+         </font>
+      </Label>
+      <Text fx:id="nomor" layoutX="554.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="55.58310890197754">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Text>
+      <Label fx:id="pertanyaan" layoutX="135.0" layoutY="92.0" prefHeight="61.0" prefWidth="430.0" text="" textFill="#29415b" wrapText="true">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
          </font>
       </Label>
    </children>
