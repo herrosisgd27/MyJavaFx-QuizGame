@@ -9,8 +9,5 @@
         <module name="MyJavaFx-QuizGame" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MyJavaFx-QuizGame" target="0" />
-    </bytecodeTargetLevel>
   </component>
 </project>
