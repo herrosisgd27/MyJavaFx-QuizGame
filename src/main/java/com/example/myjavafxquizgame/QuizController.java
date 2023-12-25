@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.OverrunStyle;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -24,7 +25,7 @@ public class QuizController extends Hover {
 //    String[] question  = fikih.question;
 //    String[] answers = fikih.answer;
     @FXML
-    private Text nomor;
+    private Text nomor,text1,text2,text3,text4;
     String[][] options = Fikih.option;
     String[] questions = Fikih.question;
     String[] answers = Fikih.answer;
@@ -35,6 +36,11 @@ public class QuizController extends Hover {
     @FXML
     public Button opt1,opt2,opt3,opt4;
 
+    @FXML
+    public Circle bulat1,bulat2,bulat3,bulat4;
+
+
+
     static int counter = 0;
     static int benar = 0;
     static int salah = 0;
@@ -44,7 +50,7 @@ public class QuizController extends Hover {
 
     @FXML
     private void initialize(){
-        addHoverEffectQuiz(opt1,opt2,opt3,opt4);
+        addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
         soal();
 
     }
@@ -57,7 +63,7 @@ public class QuizController extends Hover {
             opt1.setFont(new Font("Arial Rounded MT Bold",15));
             opt3.setFont(new Font("Arial Rounded MT Bold",15));
         }
-            if (counter >= 0 && counter <= questions.length) {
+            if (counter <= questions.length) {
                 nomor.setText(String.valueOf((counter +1)));
                 pertanyaan.setText( questions[counter]);
 

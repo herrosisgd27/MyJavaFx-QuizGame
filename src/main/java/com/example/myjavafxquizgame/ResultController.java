@@ -17,10 +17,10 @@ public class ResultController {
     public ProgressIndicator benar_progress, salah_progress;
 
     @FXML
-    public Rectangle marks_benar,marks_salah, lanjut,keluar;
+    public Rectangle marks_benar,marks_salah, lanjut, keluar;
 
     int nilaiCounter = quiz.getCounter();
-    int maks = nilaiCounter;
+    int maks = 100;
     int bobot;
     @FXML
     private void initialize(){
@@ -31,11 +31,11 @@ public class ResultController {
         }else if(benar >= 3 && benar <= 6){
             pesan.setText("Tingkatin lagi bang, belajarnya");
         }else if(benar >= 7){
-            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+            pesan.setText("Yu semangat yu tingkatin lagi, belajarnya");
         }else if(benar == quiz.counter){
             pesan.setText("Busett, GG bang!!!");
         }else{
-            pesan.setText("APA YANG SLAAH WOII");
+            pesan.setText("APA YANG SALAH WOII");
         }
         nilai.setLayoutY(200);
 //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
