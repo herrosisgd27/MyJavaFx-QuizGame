@@ -7,6 +7,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,6 +29,7 @@ public class HomeController {
 //    private AnchorPane myPane; // misalkan ini adalah elemen Pane dari FXML
     @FXML
     private ProgressBar proses;
+
 
     @FXML
     private Button playBtnQuiz;
@@ -102,11 +104,11 @@ public class HomeController {
 
         playBtnQuiz.setOnAction(event ->openQuizStage());
 
-        playBtnQuiz.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ENTER) {
-                openQuizStage();
-            }
-        });
+//        playBtnQuiz.setOnKeyPressed(event -> {
+//            if (event.getCode() == KeyCode.ENTER) {
+//                openQuizStage();
+//            }
+//        });
 
 
 //        playBtnQuiz.setOnAction(event -> {
@@ -171,7 +173,7 @@ public class HomeController {
                 Stage thisstage = (Stage) playBtnQuiz.getScene().getWindow();
                 thisstage.close();
 
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("quizSKI.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kategori.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);

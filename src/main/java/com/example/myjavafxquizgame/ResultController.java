@@ -1,10 +1,18 @@
 package com.example.myjavafxquizgame;
 
+import javafx.application.Platform;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ResultController {
     QuizFikih quizFikih = new QuizFikih();
@@ -12,14 +20,14 @@ public class ResultController {
     QuizSKI quizSKI = new QuizSKI();
     @FXML
     public Label pesan, marksbenar, markssalah, markstext, nilai_maksimum, nilai;
-
+    @FXML
+    public Button lanjut,keluar;
     public Text benartext, salahtext;
     @FXML
     public ProgressIndicator benar_progress, salah_progress;
 
     @FXML
-    public Rectangle marks_benar,marks_salah, lanjut,keluar;
-
+    public Rectangle marks_benar,marks_salah;
 
     int bobot;
     @FXML
@@ -36,6 +44,35 @@ public class ResultController {
             System.out.println("INI SKI");
             SKI(quizSKI);
         }
+        lanjut.setOnAction(event ->openLanjutStage());
+        keluar.setOnAction(actionEvent -> openKeluarStage());
+//        openKeluarStage();
+    }
+
+
+    private void openLanjutStage() {
+        Platform.runLater(() -> {
+            try {
+                Stage thisstage = (Stage) lanjut.getScene().getWindow();
+                thisstage.close();
+
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kategori.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.initStyle(StageStyle.TRANSPARENT);
+                scene.setFill(Color.TRANSPARENT);
+
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void openKeluarStage() {
+        Stage thisstage = (Stage) keluar.getScene().getWindow();
+        thisstage.close();
     }
 private void Fiqih(QuizFikih quizFikih){
     int nilaiCounter = quizFikih.getCounter();
