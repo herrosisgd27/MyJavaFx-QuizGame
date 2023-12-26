@@ -1,18 +1,18 @@
-#playBtnQuiz:hover {
-    /* Efek hover yang Anda inginkan */
-    -fx-background-color: blue; /* Ganti warna latar belakang saat dihover */
-    -fx-text-fill: white; /* Ganti warna teks saat dihover */
-    -fx-font-weight: bold; /* Atur teks menjadi bold saat dihover */
-}
+/*#playBtnQuiz:hover {*/
+/*    !* Efek hover yang Anda inginkan *!*/
+/*    -fx-background-color: blue; !* Ganti warna latar belakang saat dihover *!*/
+/*    -fx-text-fill: white; !* Ganti warna teks saat dihover *!*/
+/*    -fx-font-weight: bold; !* Atur teks menjadi bold saat dihover *!*/
+/*}*/
 
 
-/* styles.css */
-.progress-bar {
-    -fx-accent:  #5C8374; /* Ganti dengan warna yang Anda inginkan */
-}
+/*!* styles.css *!*/
+/*.progress-bar {*/
+/*    -fx-accent:  #5C8374; !* Ganti dengan warna yang Anda inginkan *!*/
+/*}*/
 
-.myLabel{
-    -fx-border-radius: 50px;
-    -fx-background-color: linear-gradient(180deg, #2ECC71 0%, rgba(46, 204, 113, 0.21) 50%);
+/*.myLabel{*/
+/*    -fx-border-radius: 50px;*/
+/*    -fx-background-color: linear-gradient(180deg, #2ECC71 0%, rgba(46, 204, 113, 0.21) 50%);*/
 
-}
+/*}*/

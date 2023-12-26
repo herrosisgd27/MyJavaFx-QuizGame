@@ -14,7 +14,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class ResultController {
+public class ResultController extends Hover{
     QuizFikih quizFikih = new QuizFikih();
     QuizAqidah quizAqidah = new QuizAqidah();
     QuizSKI quizSKI = new QuizSKI();
@@ -32,6 +32,7 @@ public class ResultController {
     int bobot;
     @FXML
     private void initialize(){
+        addHoverEffectResult(keluar,lanjut);
         if(quizFikih.getCounter() != 1){
             System.out.println("INI FIQIH");
             Fiqih(quizFikih);
