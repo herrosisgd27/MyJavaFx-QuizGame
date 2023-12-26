@@ -51,7 +51,7 @@
       <!--            <Font name="Times New Roman Bold" size="50.0" />-->
       <!--         </font>-->
       <!--      </Label>-->
-      <Button fx:id="opt1" alignment="BASELINE_LEFT" layoutX="68.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="A." textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt1" layoutX="68.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center;" stylesheets="@../../../CSS/style.css" text="A." textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -81,7 +81,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt2" alignment="BASELINE_LEFT" layoutX="355.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="B. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt2" layoutX="355.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center;" stylesheets="@../../../CSS/style.css" text="B. " textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -111,7 +111,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt3" alignment="BASELINE_LEFT" layoutX="68.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="C. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt3" layoutX="68.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center;" stylesheets="@../../../CSS/style.css" text="C. " textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -141,7 +141,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt4" alignment="BASELINE_LEFT" layoutX="355.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="D. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt4" layoutX="355.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center;" stylesheets="@../../../CSS/style.css" text="D. " textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>

@@ -46,6 +46,9 @@ public class QuizFikih extends Hover {
     @FXML
     private void initialize(){
         addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
+        if(counter==20){
+            counter = 1;
+        }
         soal();
     }
 

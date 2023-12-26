@@ -46,29 +46,32 @@ private Text nomor,text1,text2,text3,text4;
     @FXML
     private void initialize(){
         addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
+        if(counter==20){
+            counter = 1;
+        }
         soal();
     }
 
     private void soal() {
-        if(counter == 11){
-            opt1.setFont(new Font("Arial Rounded MT Bold",12));
-            opt3.setFont(new Font("Arial Rounded MT Bold",12));
-        }else{
-            opt1.setFont(new Font("Arial Rounded MT Bold",15));
-            opt3.setFont(new Font("Arial Rounded MT Bold",15));
-        }
-            if (counter <= 20) {
-                index = random.nextInt(50);
-                nomor.setText(String.valueOf(counter));
-                pertanyaan.setText(questions[index]);
+//        if(counter == 11){
+//            opt1.setFont(new Font("Arial Rounded MT Bold",12));
+//            opt3.setFont(new Font("Arial Rounded MT Bold",12));
+//        }else{
+//            opt1.setFont(new Font("Arial Rounded MT Bold",15));
+//            opt3.setFont(new Font("Arial Rounded MT Bold",15));
+//        }
+        if (counter <= 20) {
+            index = random.nextInt(50);
+            nomor.setText(String.valueOf(counter));
+            pertanyaan.setText(questions[index]);
 
-                opt1.setText(options[index][0]);
-                opt2.setText(options[index][1]);
-                opt3.setText(options[index][2]);
-                opt4.setText(options[index][3]);
-            }
-            System.out.println(questions[index]);
-            System.out.println(answers[index]);
+            opt1.setText(options[index][0]);
+            opt2.setText(options[index][1]);
+            opt3.setText(options[index][2]);
+            opt4.setText(options[index][3]);
+        }
+        System.out.println(questions[index]);
+        System.out.println(answers[index]);
 //        }
         System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
