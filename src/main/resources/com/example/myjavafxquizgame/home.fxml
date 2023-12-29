@@ -111,12 +111,15 @@
       </Label>
       <ButtonBar layoutX="324.0" layoutY="14.0" prefHeight="40.0" prefWidth="0.0" />
    </Group>
-   <Button fx:id="playBtnQuiz" layoutX="297.0" layoutY="323.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #5C8374; -fx-background-radius: 28px;" text="START" textFill="WHITE">
+   <Button fx:id="playBtnQuiz" layoutX="297.0" layoutY="323.0" mnemonicParsing="false" opacity="0.73" prefHeight="51.0" prefWidth="141.0" style="-fx-background-color: #5C8374; -fx-background-radius: 28px;" text="START" textFill="WHITE">
       <font>
          <Font name="Calibri Bold" size="28.0" />
       </font>
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
+      <effect>
+         <DropShadow height="7.58" offsetX="-2.0" offsetY="2.0" radius="6.0600000000000005" spread="0.4" width="18.66" />
+      </effect>
    </Button>
 </AnchorPane>

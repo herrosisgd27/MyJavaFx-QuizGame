@@ -69,11 +69,11 @@ public class HomeController {
         jalankanAnimasi();
 
         playBtnQuiz.setOnMouseEntered(e -> {
-            playBtnQuiz.setStyle("-fx-background-color: #163e3e; -fx-background-radius : 28px; -fx-border-radius : 32px; -fx-text-fill: #5C8374;");
+            playBtnQuiz.setStyle("-fx-background-color: #476056; -fx-background-radius : 28px; -fx-border-radius : 32px; -fx-text-fill: #ffffff;");
         });
 
         playBtnQuiz.setOnMouseExited(e -> {
-            playBtnQuiz.setStyle("-fx-background-color: #5C8374; -fx-background-radius: 28px; -fx-border-radius : 32px; -fx-text-fill: #333333;");
+            playBtnQuiz.setStyle("-fx-background-color: #5C8374; -fx-background-radius: 28px;");
         });
 
 
@@ -120,16 +120,17 @@ public class HomeController {
 
 
     private void jalankanAnimasi() {
-        animasiX(random.nextInt(309), bulatA); // Angka 500 adalah nilai maksimal Y yang diinginkan
-        animasiY(random.nextInt(309), bulatKuning);
-        animasiX(random.nextInt(309), bulatB);
-        animasiY(random.nextInt(309), bulatUngu);
+        animasiX(random.nextInt(500), bulatA); // Angka 500 adalah nilai maksimal Y yang diinginkan
+        animasiY(random.nextInt(500), bulatKuning);
+        animasiX(random.nextInt(500), bulatB);
+        animasiY(random.nextInt(500), bulatUngu);
     }
+
 
     private void animasiY(double endY, Circle bulat){
         if (bulat != null) {
-            double startY = random.nextInt(500);
-            double moveDuration = 8.0;
+            double startY = random.nextInt(100,500);
+            double moveDuration = 20.0;
 
             // Membuat objek Timeline untuk setiap lingkaran
             Timeline timeline = new Timeline(
@@ -148,8 +149,8 @@ public class HomeController {
 
     private void animasiX(double endX, Circle bulat){
         if (bulat != null) {
-            double startX = random.nextInt(100,800);
-            double moveDuration = 8.0;
+            double startX = random.nextInt(100,500);
+            double moveDuration = 20.0;
 
             // Membuat objek Timeline untuk setiap lingkaran
             Timeline timeline = new Timeline(
