@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -23,15 +23,18 @@ public class QuizTahsin extends Hover {
     int index;
 //    Tahsin Tahsin = new Tahsin();
 
-//    String[][] option = Tahsin.option;
+    //    String[][] option = Tahsin.option;
 //    String[] question  = Tahsin.question;
 //    String[] answers = Tahsin.answer;
     @FXML
-    private Text nomor;
+    private Text nomor,text1,text2,text3,text4;
 
     @FXML
     public Label arab,pertanyaan;
 
+
+    @FXML
+    public Circle bulat1,bulat2,bulat3,bulat4;
     @FXML
     public Button opt1,opt2,opt3,opt4;
 
@@ -44,30 +47,35 @@ public class QuizTahsin extends Hover {
 
     @FXML
     private void initialize(){
-        addHoverEffectQuiz(opt1,opt2,opt3,opt4);
+        addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
+        if(counter==20){
+            counter = 1;
+            benar = 0;
+            salah = 0;
+        }
         soal();
     }
 
     private void soal() {
-        if(counter == 11){
-            opt1.setFont(new Font("Arial Rounded MT Bold",12));
-            opt3.setFont(new Font("Arial Rounded MT Bold",12));
-        }else{
-            opt1.setFont(new Font("Arial Rounded MT Bold",15));
-            opt3.setFont(new Font("Arial Rounded MT Bold",15));
-        }
-            if (counter <= 20) {
-                index = random.nextInt(50);
-                nomor.setText(String.valueOf(counter));
-                pertanyaan.setText(questions[index]);
+//        if(counter == 11){
+//            opt1.setFont(new Font("Arial Rounded MT Bold",12));
+//            opt3.setFont(new Font("Arial Rounded MT Bold",12));
+//        }else{
+//            opt1.setFont(new Font("Arial Rounded MT Bold",15));
+//            opt3.setFont(new Font("Arial Rounded MT Bold",15));
+//        }
+        if (counter <= 20) {
+            index = random.nextInt(50);
+            nomor.setText(String.valueOf(counter));
+            pertanyaan.setText(questions[index]);
 
-                opt1.setText(options[index][0]);
-                opt2.setText(options[index][1]);
-                opt3.setText(options[index][2]);
-                opt4.setText(options[index][3]);
-            }
-            System.out.println(questions[index]);
-            System.out.println(answers[index]);
+            opt1.setText(options[index][0]);
+            opt2.setText(options[index][1]);
+            opt3.setText(options[index][2]);
+            opt4.setText(options[index][3]);
+        }
+        System.out.println(questions[index]);
+        System.out.println(answers[index]);
 //        }
         System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);

@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -27,8 +26,8 @@ public class QuizSKI extends Hover {
 //    String[][] option = SKI.option;
 //    String[] question  = SKI.question;
 //    String[] answers = SKI.answer;
-@FXML
-private Text nomor,text1,text2,text3,text4;
+    @FXML
+    private Text nomor,text1,text2,text3,text4;
     @FXML
     public Label arab,pertanyaan;
     @FXML
@@ -45,7 +44,7 @@ private Text nomor,text1,text2,text3,text4;
 
     @FXML
     private void initialize(){
-        addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
+            addHoverEffectQuiz(opt1,opt2,opt3,opt4,bulat1,bulat2,bulat3,bulat4,text1,text2,text3,text4);
         if(counter==20){
             counter = 1;
             benar = 0;
