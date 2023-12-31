@@ -14,6 +14,8 @@ public class Fikih {
             {"4", "3", "5", "2"},
             //10
             {"15", "12", "17", "13"},
+            //11 (opt1 dan opt 3) index ke 0 sama 3 kepanjangan :
+            //|                                           yang ini                                                       |                     |                                      yang ini                                  |
             {"Aku bersaksi bahwa tidak ada Tuhan melainkan Allah.Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah", "Allah Maha Besar", "Dengan menyebut nama-Mu ya allah, aku berlindung dari godaan setan yang terkutuk", "Segala puji bagi allah tuhan semesta alam"},
             {"أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللهُ", "أَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهِ", "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهِ", "اللهُ أَكْبَرُ اللهُ أَكْبَرُ اللهُ أَكْبَرُ  "},
             {"Sunnah", "Haram", "Wajib", "Makruh"},

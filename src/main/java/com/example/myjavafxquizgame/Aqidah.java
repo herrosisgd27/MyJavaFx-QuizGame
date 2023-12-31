@@ -47,8 +47,10 @@ public class Aqidah{
             {"Barzakh", "Mizan", "Nyata", "Khayal"},
             //40
             {"Takir dan kehendak Allah", "Doa dan ibadah", "Kaya dan miskin", "Surga dan neraka"},
+            //41 (opt2) index ke 2 kepanjangan :                                        |                             yang ini                                  |
             {"Membuat mereka tidak perlu berdoa", "Membuat mereka tidak perlu bekerja", "Membantu mereka menerima apa yang terjadi dalam hidup dengan lapang dada", "Membuat mereka tidak perlu belajar"},
             {"Saat memilih makanan di restoran", "Saat menghadapi kegagalan", "Saat bermain video game", "Saat membeli baju baru"},
+            //43 (opt4) index ke 3 kepanjangan :                                                                 |                                      yang ini                                                |
             {"Agar bisa menang dalam lomba", "Agar bisa menjadi kaya", "Agar bisa mendapatkan pekerjaam impian", "Agar bisa menerima dan menghadapai segala hal yang terjadi dalam hidup dengan ikhlas dan sabar"},
             {"99", "98", "100", "101"},
             {"Pengasih", "Adil", "Penyayang", "Pencipta"},

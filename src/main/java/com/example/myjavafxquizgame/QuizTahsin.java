@@ -76,6 +76,7 @@ public class QuizTahsin extends Hover {
         }
         System.out.println(questions[index]);
         System.out.println(answers[index]);
+        System.out.println(index);
 //        }
         System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
