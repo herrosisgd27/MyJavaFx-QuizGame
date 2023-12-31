@@ -1,18 +1,8 @@
-/*#playBtnQuiz:hover {*/
-/*    !* Efek hover yang Anda inginkan *!*/
-/*    -fx-background-color: blue; !* Ganti warna latar belakang saat dihover *!*/
-/*    -fx-text-fill: white; !* Ganti warna teks saat dihover *!*/
-/*    -fx-font-weight: bold; !* Atur teks menjadi bold saat dihover *!*/
-/*}*/
+/* Misalkan file CSS Anda bernama style.css */
 
-
-/*!* styles.css *!*/
-/*.progress-bar {*/
-/*    -fx-accent:  #5C8374; !* Ganti dengan warna yang Anda inginkan *!*/
-/*}*/
-
-/*.myLabel{*/
-/*    -fx-border-radius: 50px;*/
-/*    -fx-background-color: linear-gradient(180deg, #2ECC71 0%, rgba(46, 204, 113, 0.21) 50%);*/
-
-/*}*/
+/* Menambahkan gaya text-overflow ke tombol */
+.button-text-overflow {
+    -fx-text-overrun: ellipsis; /* Untuk menggunakan elipsis jika terlalu panjang */
+    -fx-wrap-text: true; /* Untuk mengaktifkan pembungkus teks */
+    -fx-alignment: left; /* Untuk mengatur teks ke tengah */
+}

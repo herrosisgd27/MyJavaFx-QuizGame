@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxquizgame.QuizSKI">
    <children>
       <Circle fill="WHITE" layoutX="547.0" layoutY="285.0" opacity="0.08" radius="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -51,7 +43,7 @@
       <!--            <Font name="Times New Roman Bold" size="50.0" />-->
       <!--         </font>-->
       <!--      </Label>-->
-      <Button fx:id="opt1" alignment="BASELINE_LEFT" layoutX="68.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="A." textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt1" layoutX="68.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt1clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center; fx-text-overrun: ellipsis; -fx-wrap-text: true;" stylesheets="@../../../CSS/style.css" text="A." wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -81,7 +73,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt2" alignment="BASELINE_LEFT" layoutX="355.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="B. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt2" layoutX="355.0" layoutY="196.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt2clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center; fx-text-overrun: ellipsis; -fx-wrap-text: true;" stylesheets="@../../../CSS/style.css" text="B. " wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -111,7 +103,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt3" alignment="BASELINE_LEFT" layoutX="68.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="C. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt3" layoutX="68.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt3clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center; fx-text-overrun: ellipsis; -fx-wrap-text: true;" stylesheets="@../../../CSS/style.css" text="C. "  wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -141,7 +133,7 @@
             </Group>
          </graphic>
       </Button>
-      <Button fx:id="opt4" alignment="BASELINE_LEFT" layoutX="355.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px;" stylesheets="@../../../CSS/style.css" text="D. " textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="opt4" layoutX="355.0" layoutY="285.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#opt4clik" prefHeight="74.0" prefWidth="263.0" style="-fx-background-color: #fffffff; -fx-background-radius: 18px; -fx-alignment: left center; fx-text-overrun: ellipsis; -fx-wrap-text: true;" stylesheets="@../../../CSS/style.css" text="D. "  wrapText="true">
          <font>
             <Font name="Arial Rounded MT Bold" size="15.0" />
          </font>
@@ -176,21 +168,17 @@
             <DropShadow height="10.0" offsetY="1.5" radius="4.5" width="10.0" />
          </effect>
       </Rectangle>
-      <Circle fill="#9b59b6" layoutX="580.0" layoutY="66.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+      <Circle fill="#9b59b6" layoutX="585.0" layoutY="135.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
             <DropShadow height="10.0" offsetX="-1.5" offsetY="1.5" radius="4.5" width="10.0" />
-         </effect></Circle>
-      <Label fx:id="arab" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="144.0" layoutY="2.0" prefHeight="104.0" prefWidth="392.0">
-         <font>
-            <Font name="Times New Roman Bold Italic" size="39.0" />
-         </font>
-      </Label>
-      <Text fx:id="nomor" fill="WHITE" layoutX="547.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="66.78306007385254">
+         </effect>
+      </Circle>
+      <Text fx:id="nomor" fill="WHITE" layoutX="552.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="66.78306007385254">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="48.0" />
          </font>
       </Text>
-      <Label fx:id="pertanyaan" layoutX="129.0" layoutY="87.0" prefHeight="61.0" prefWidth="430.0" text="" textFill="#29415b" wrapText="true">
+      <Label fx:id="pertanyaan" layoutX="140.0" layoutY="12.0" prefHeight="83.0" prefWidth="430.0" textFill="#29415b" wrapText="true">
          <font>
             <Font name="Bell MT Bold" size="20.0" />
          </font>

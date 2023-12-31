@@ -1,7 +1,6 @@
 package com.example.myjavafxquizgame;
 
 import javafx.application.Platform;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +17,7 @@ public class ResultController extends Hover{
     QuizFikih quizFikih = new QuizFikih();
     QuizAqidah quizAqidah = new QuizAqidah();
     QuizSKI quizSKI = new QuizSKI();
+    QuizTahsin quizTahsin = new QuizTahsin();
     @FXML
     public Label pesan, marksbenar, markssalah, markstext, nilai_maksimum, nilai;
     @FXML
@@ -44,6 +44,10 @@ public class ResultController extends Hover{
         if(quizSKI.getCounter() != 1){
             System.out.println("INI SKI");
             SKI(quizSKI);
+        }
+        if(quizTahsin.getCounter() != 1){
+            System.out.println("INI Tahsin");
+            Tahsin(quizTahsin);
         }
         lanjut.setOnAction(event ->openLanjutStage());
         keluar.setOnAction(actionEvent -> openKeluarStage());
@@ -75,106 +79,140 @@ public class ResultController extends Hover{
         Stage thisstage = (Stage) keluar.getScene().getWindow();
         thisstage.close();
     }
-private void Fiqih(QuizFikih quizFikih){
-    int nilaiCounter = quizFikih.getCounter();
-    int maks = nilaiCounter;
-    int benar = QuizFikih.benar;
-//        pesan.setText("HAHAHAH");
-    if(benar <= 2){
-        pesan.setText("NT bang");
-    }else if(benar >= 3 && benar <= 6){
-        pesan.setText("Tingkatin lagi bang, belajarnya");
-    }else if(benar >= 7){
-        pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
-    }else if(benar == quizFikih.counter){
-        pesan.setText("Busett, GG bang!!!");
-    }else{
-        pesan.setText("APA YANG SLAAH WOII");
+    private void Fiqih(QuizFikih quizFikih){
+        int nilaiCounter = quizFikih.getCounter();
+        int maks = nilaiCounter;
+        int benar = QuizFikih.benar;
+    //        pesan.setText("HAHAHAH");
+        if(benar <= 2){
+            pesan.setText("NT bang");
+        }else if(benar >= 3 && benar <= 6){
+            pesan.setText("Tingkatin lagi bang, belajarnya");
+        }else if(benar >= 7){
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+        }else if(benar == QuizFikih.counter){
+            pesan.setText("Busett, GG bang!!!");
+        }else{
+            pesan.setText("APA YANG SLAAH WOII");
+        }
+        nilai.setLayoutY(200);
+    //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
+    //        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
+
+        System.out.println(QuizFikih.counter);
+        marksbenar.setText(QuizFikih.benar + "/" + nilaiCounter);
+        markssalah.setText(QuizFikih.salah + "/" + nilaiCounter);
+        nilai.setText(String.valueOf(benar * 5));
+    //        float benarr =  (float) QuizController.benar/nilaiCounter;
+    //        benar_progress.setProgress(benarr);
+    //
+    //        float salahh =  (float) QuizController.salah/nilaiCounter;
+    //        salah_progress.setProgress(salahh);
+        nilai_maksimum.setText("dari 100");
+
+    //        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
     }
-    nilai.setLayoutY(200);
-//        benartext.setText(String.valueOf("benar : "+QuizController.benar));
-//        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-    System.out.println(quizFikih.counter);
-    marksbenar.setText(QuizFikih.benar + "/" + nilaiCounter);
-    markssalah.setText(QuizFikih.salah + "/" + nilaiCounter);
-    nilai.setText(String.valueOf(benar * 5));
-//        float benarr =  (float) QuizController.benar/nilaiCounter;
-//        benar_progress.setProgress(benarr);
-//
-//        float salahh =  (float) QuizController.salah/nilaiCounter;
-//        salah_progress.setProgress(salahh);
-    nilai_maksimum.setText("dari 100");
+    private void Aqidah(QuizAqidah quizAqidah){
+        int nilaiCounter = quizAqidah.getCounter();
+        int maks = nilaiCounter;
+        int benar = QuizAqidah.benar;
+    //        pesan.setText("HAHAHAH");
+        if(benar <= 2){
+            pesan.setText("NT bang");
+        }else if(benar >= 3 && benar <= 6){
+            pesan.setText("Tingkatin lagi bang, belajarnya");
+        }else if(benar >= 7){
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+        }else if(benar == QuizAqidah.counter){
+            pesan.setText("Busett, GG bang!!!");
+        }else{
+            pesan.setText("APA YANG SLAAH WOII");
+        }
+        nilai.setLayoutY(200);
+    //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
+    //        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-//        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
-}
+        System.out.println(QuizAqidah.counter);
+        marksbenar.setText(QuizAqidah.benar + "/" + nilaiCounter);
+        markssalah.setText(QuizAqidah.salah + "/" + nilaiCounter);
+        nilai.setText(String.valueOf(benar * 5));
+    //        float benarr =  (float) QuizController.benar/nilaiCounter;
+    //        benar_progress.setProgress(benarr);
+    //
+    //        float salahh =  (float) QuizController.salah/nilaiCounter;
+    //        salah_progress.setProgress(salahh);
+        nilai_maksimum.setText("dari 100");
 
-private void Aqidah(QuizAqidah quizAqidah){
-    int nilaiCounter = quizAqidah.getCounter();
-    int maks = nilaiCounter;
-    int benar = QuizAqidah.benar;
-//        pesan.setText("HAHAHAH");
-    if(benar <= 2){
-        pesan.setText("NT bang");
-    }else if(benar >= 3 && benar <= 6){
-        pesan.setText("Tingkatin lagi bang, belajarnya");
-    }else if(benar >= 7){
-        pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
-    }else if(benar == quizAqidah.counter){
-        pesan.setText("Busett, GG bang!!!");
-    }else{
-        pesan.setText("APA YANG SLAAH WOII");
+    //        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
     }
-    nilai.setLayoutY(200);
-//        benartext.setText(String.valueOf("benar : "+QuizController.benar));
-//        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-    System.out.println(quizAqidah.counter);
-    marksbenar.setText(QuizAqidah.benar + "/" + nilaiCounter);
-    markssalah.setText(QuizAqidah.salah + "/" + nilaiCounter);
-    nilai.setText(String.valueOf(benar * 5));
-//        float benarr =  (float) QuizController.benar/nilaiCounter;
-//        benar_progress.setProgress(benarr);
-//
-//        float salahh =  (float) QuizController.salah/nilaiCounter;
-//        salah_progress.setProgress(salahh);
-    nilai_maksimum.setText("dari 100");
+    private void SKI(QuizSKI quizSKI){
+        int nilaiCounter = quizSKI.getCounter();
+        int maks = nilaiCounter;
+        int benar = QuizSKI.benar;
+    //        pesan.setText("HAHAHAH");
+        if(benar <= 2){
+            pesan.setText("NT bang");
+        }else if(benar >= 3 && benar <= 6){
+            pesan.setText("Tingkatin lagi bang, belajarnya");
+        }else if(benar >= 7){
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+        }else if(benar == QuizSKI.counter){
+            pesan.setText("Busett, GG bang!!!");
+        }else{
+            pesan.setText("APA YANG SLAAH WOII");
+        }
+        nilai.setLayoutY(200);
+    //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
+    //        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-//        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
-}
+        System.out.println(QuizSKI.counter);
+        marksbenar.setText(QuizSKI.benar + "/" + nilaiCounter);
+        markssalah.setText(QuizSKI.salah + "/" + nilaiCounter);
+        nilai.setText(String.valueOf(benar * 5));
+    //        float benarr =  (float) QuizController.benar/nilaiCounter;
+    //        benar_progress.setProgress(benarr);
+    //
+    //        float salahh =  (float) QuizController.salah/nilaiCounter;
+    //        salah_progress.setProgress(salahh);
+        nilai_maksimum.setText("dari 100");
 
-private void SKI(QuizSKI quizSKI){
-    int nilaiCounter = quizSKI.getCounter();
-    int maks = nilaiCounter;
-    int benar = quizSKI.benar;
-//        pesan.setText("HAHAHAH");
-    if(benar <= 2){
-        pesan.setText("NT bang");
-    }else if(benar >= 3 && benar <= 6){
-        pesan.setText("Tingkatin lagi bang, belajarnya");
-    }else if(benar >= 7){
-        pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
-    }else if(benar == quizSKI.counter){
-        pesan.setText("Busett, GG bang!!!");
-    }else{
-        pesan.setText("APA YANG SLAAH WOII");
+    //        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
     }
-    nilai.setLayoutY(200);
-//        benartext.setText(String.valueOf("benar : "+QuizController.benar));
-//        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-    System.out.println(quizSKI.counter);
-    marksbenar.setText(quizSKI.benar + "/" + nilaiCounter);
-    markssalah.setText(quizSKI.salah + "/" + nilaiCounter);
-    nilai.setText(String.valueOf(benar * 5));
-//        float benarr =  (float) QuizController.benar/nilaiCounter;
-//        benar_progress.setProgress(benarr);
-//
-//        float salahh =  (float) QuizController.salah/nilaiCounter;
-//        salah_progress.setProgress(salahh);
-    nilai_maksimum.setText("dari 100");
+    private void Tahsin(QuizTahsin quizTahsin){
+        int nilaiCounter = quizTahsin.getCounter();
+        int maks = nilaiCounter;
+        int benar = QuizTahsin.benar;
+        //        pesan.setText("HAHAHAH");
+        if(benar <= 2){
+            pesan.setText("NT bang");
+        }else if(benar >= 3 && benar <= 6){
+            pesan.setText("Tingkatin lagi bang, belajarnya");
+        }else if(benar >= 7){
+            pesan.setText("Yu semnagat yu tingkatin lagi, belajarnya");
+        }else if(benar == QuizTahsin.counter){
+            pesan.setText("Busett, GG bang!!!");
+        }else{
+            pesan.setText("APA YANG SLAAH WOII");
+        }
+        nilai.setLayoutY(200);
+        //        benartext.setText(String.valueOf("benar : "+QuizController.benar));
+        //        salahtext.setText(String.valueOf("salah: "+QuizController.salah));
 
-//        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
-}
+        System.out.println(QuizTahsin.counter);
+        marksbenar.setText(QuizTahsin.benar + "/" + nilaiCounter);
+        markssalah.setText(QuizTahsin.salah + "/" + nilaiCounter);
+        nilai.setText(String.valueOf(benar * 5));
+        //        float benarr =  (float) QuizController.benar/nilaiCounter;
+        //        benar_progress.setProgress(benarr);
+        //
+        //        float salahh =  (float) QuizController.salah/nilaiCounter;
+        //        salah_progress.setProgress(salahh);
+        nilai_maksimum.setText("dari 100");
+
+        //        markstext.setText(String.valueOf(QuizController.benar + " Scores dicetak"));
+    }
 
 }
