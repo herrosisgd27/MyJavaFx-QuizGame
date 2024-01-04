@@ -24,7 +24,7 @@ public class Hover {
             bulat1.setFill(Paint.valueOf("#e74c3c"));
             text1.setFill(Paint.valueOf("#ffffff"));
             button1.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333; -fx-alignment: left center; -fx-text-overrun: ellipsis; -fx-wrap-text: true; ");
-            button1.setStyle("-fx-text-overrun: ellipsis; -fx-wrap-text: true; -fx-alignment: left;");
+
         });
 
         button2.setOnMouseEntered(e -> {

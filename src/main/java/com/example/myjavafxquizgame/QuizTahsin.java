@@ -26,7 +26,7 @@ public class QuizTahsin extends Hover {
     private Text nomor, text1, text2, text3, text4;
 
     @FXML
-    public Label arab, pertanyaan;
+    public Label pertanyaan;
 
 
     @FXML
