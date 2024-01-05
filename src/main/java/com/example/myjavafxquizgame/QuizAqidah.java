@@ -21,11 +21,7 @@ public class QuizAqidah extends Hover {
     String[] answers = Aqidah.answer;
     Random random = new Random();
     int index;
-//    Aqidah Aqidah = new Aqidah();
 
-//    String[][] option = Aqidah.option;
-//    String[] question  = Aqidah.question;
-//    String[] answers = Aqidah.answer;
     @FXML
     private Text nomor,text1,text2,text3,text4;
 
@@ -59,13 +55,7 @@ public class QuizAqidah extends Hover {
     }
 
     private void soal() {
-//        if(counter == 11){
-//            opt1.setFont(new Font("Arial Rounded MT Bold",12));
-//            opt3.setFont(new Font("Arial Rounded MT Bold",12));
-//        }else{
-//            opt1.setFont(new Font("Arial Rounded MT Bold",15));
-//            opt3.setFont(new Font("Arial Rounded MT Bold",15));
-//        }
+
             if (counter <= 20) {
                 index = random.nextInt(50);
                 nomor.setText(String.valueOf(counter));
@@ -79,7 +69,6 @@ public class QuizAqidah extends Hover {
             System.out.println(questions[index]);
             System.out.println(answers[index]);
             System.out.println(index);
-//        }
         System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
         System.out.println(counter);
@@ -165,83 +154,4 @@ public class QuizAqidah extends Hover {
 
         nextQuestion(actionEvent);
     }
-
-//        if ( counter == 4){
-//
-//            try {
-//                Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
-//                thisstage.close();
-//
-//                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result.fxml"));
-//                Scene scene = new Scene(fxmlLoader.load());
-//                Stage stage = new Stage();
-//                stage.setScene(scene);
-//                stage.initStyle(StageStyle.TRANSPARENT);
-//                scene.setFill(Color.TRANSPARENT);
-//
-//                stage.show();
-//
-//
-//            } catch (Exception e){
-//                e.printStackTrace();
-//            }
-//
-//        }else{
-//            counter++;
-//            soal();
-//        }
-//    }
-
-//    private void tombolDefault(){
-//        opt1.setPrefWidth(211);
-//        opt1.setLayoutX(76);
-//
-//        opt2.setPrefWidth(211);
-//        opt2.setLayoutX(385);
-//
-//        opt3.setPrefWidth(211);
-//        opt3.setLayoutX(76);
-//
-//        opt4.setPrefWidth(211);
-//        opt4.setLayoutX(385);
-//
-//    }
-//
-//    private void ubahUkuranTombol() {
-//        // Mengubah ukuran tombol
-//        opt1.setPrefWidth(296);
-//        opt1.setPrefHeight(104);
-//        opt2.setPrefWidth(296);
-//        opt2.setPrefHeight(104);
-//        opt3.setPrefWidth(296);
-//        opt3.setPrefHeight(104);
-//        opt4.setPrefWidth(296);
-//        opt4.setPrefHeight(104);
-//
-//        opt1.setLayoutX(47);
-//        opt1.setLayoutY(172);
-//        opt2.setLayoutX(343);
-//        opt2.setLayoutY(172);
-//        opt3.setLayoutX(47);
-//        opt3.setLayoutY(275);
-//        opt4.setLayoutX(343);
-//        opt4.setLayoutY(275);
-//
-//    }
-//
-//    private void setButtonEllipsis(Button button, String text) {
-//        button.setText(text);
-//        button.setGraphic(createTextFlow(text)); // Menampilkan elipsis di tengah jika teks terlalu panjang
-//    }
-//
-//    private TextFlow createTextFlow(String text) {
-//        TextFlow textFlow = new TextFlow();
-//        Text textNode = new Text(text);
-//        textFlow.getChildren().add(textNode); // Menambahkan teks ke TextFlow
-//
-//        // Setel wrappingWidth ke maksimum agar teks dapat ditampilkan dengan baik
-//        textNode.wrappingWidthProperty().setValue(Double.MAX_VALUE);
-//
-//        return textFlow;
-//    }
 }

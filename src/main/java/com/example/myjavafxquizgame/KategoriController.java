@@ -18,8 +18,6 @@ public class KategoriController extends Hover{
 
     public Label textFiqih,textTahsin,textAqidah,textSejarah;
 
-//    @FXML
-//    public Group fiqih;
     public Circle bulat1,bulat2,bulat3,bulat4;
 
     public void initialize(){
@@ -29,7 +27,6 @@ public class KategoriController extends Hover{
         sejarah.setOnAction(event ->openSkiStage());
         aqidah.setOnAction(event ->openAqidahStage());
         tahsin.setOnAction(event ->openTahsinStage());
-
     }
 
     private void openFiqihStage() {

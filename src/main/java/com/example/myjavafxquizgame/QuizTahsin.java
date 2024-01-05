@@ -55,13 +55,6 @@ public class QuizTahsin extends Hover {
     }
 
     private void soal() {
-//        if(counter == 11){
-//            opt1.setFont(new Font("Arial Rounded MT Bold",12));
-//            opt3.setFont(new Font("Arial Rounded MT Bold",12));
-//        }else{
-//            opt1.setFont(new Font("Arial Rounded MT Bold",15));
-//            opt3.setFont(new Font("Arial Rounded MT Bold",15));
-//        }
         if (counter <= 20) {
             index = random.nextInt(50);
             nomor.setText(String.valueOf(counter));

@@ -23,13 +23,7 @@ import javafx.util.Duration;
 
 import java.util.Random;
 
-
 public class HomeController {
-//    @FXML
-//    private AnchorPane myPane; // misalkan ini adalah elemen Pane dari FXML
-    @FXML
-    private ProgressBar proses;
-
 
     @FXML
     private Button playBtnQuiz;
@@ -40,29 +34,6 @@ public class HomeController {
     @FXML
     private AnchorPane myLabel;
 
-//    @FXML
-//    private void initialize() {
-//        playBtnQuiz.setOnAction(event -> {
-//            // Mulai thread untuk mengubah progres bertahap
-//            new Thread(() -> {
-//                for (double i = 0.0; i <= 1.0; i += 0.01) {
-//                    try {
-//                        Thread.sleep(10);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                    double progress = i;
-//                    // Ubah progres di JavaFX Application Thread
-//                    proses.setProgress(progress);
-//                }
-//                // Setelah selesai mengubah progres, buka stage baru
-//                openQuizStage();
-//
-//            }).start();
-//        });
-//    }
-
-        Timeline timeline = new Timeline();
         Random random = new Random();
     @FXML
     private void initialize() {
@@ -75,49 +46,9 @@ public class HomeController {
         playBtnQuiz.setOnMouseExited(e -> {
             playBtnQuiz.setStyle("-fx-background-color: #5C8374; -fx-background-radius: 28px;");
         });
-
-
-
-
-
-
-
-
-
-//        new Thread(() -> {
-//            for (double i = 0.0; i <= 1.0; i += 0.01) {
-//                try {
-//                    Thread.sleep(30);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                double progress = i;
-//                // Ubah progres di JavaFX Application Thread
-//                proses.setProgress(progress);
-//            }
-//            // Setelah selesai mengubah progres, buka stage baru
-//            Platform.runLater(() -> playBtnQuiz.setVisible(true));
-//
-//        }).start();
-
-//        playBtnQuiz.setVisible(false);
-
         playBtnQuiz.setOnAction(event ->openQuizStage());
 
-//        playBtnQuiz.setOnKeyPressed(event -> {
-//            if (event.getCode() == KeyCode.ENTER) {
-//                openQuizStage();
-//            }
-//        });
-
-
-//        playBtnQuiz.setOnAction(event -> {
-//            // Mulai thread untuk mengubah progres bertahap
-//            if(event. == KeyCode.ENTER)
-//            openQuizStage();
-//        });
     }
-
 
     private void jalankanAnimasi() {
         animasiX(random.nextInt(500), bulatA); // Angka 500 adalah nilai maksimal Y yang diinginkan
@@ -125,7 +56,6 @@ public class HomeController {
         animasiX(random.nextInt(500), bulatB);
         animasiY(random.nextInt(500), bulatUngu);
     }
-
 
     private void animasiY(double endY, Circle bulat){
         if (bulat != null) {
@@ -167,7 +97,6 @@ public class HomeController {
         }
     }
 
-
     private void openQuizStage() {
         Platform.runLater(() -> {
             try {
@@ -187,6 +116,4 @@ public class HomeController {
             }
         });
     }
-
-
 }
