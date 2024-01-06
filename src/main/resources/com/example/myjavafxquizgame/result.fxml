@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafxquizgame.ResultController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="325.0" layoutX="47.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="595.0">
@@ -52,7 +45,7 @@
             <DropShadow height="10.0" offsetY="1.5" radius="4.5" width="10.0" />
          </effect>
       </Rectangle>
-      <Circle fill="WHITE" layoutX="547.0" layoutY="285.0" opacity="0.08" radius="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="WHITE" layoutX="547.0" layoutY="285.0" opacity="0.08" radius="133.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="0.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="68.0" layoutY="167.0" opacity="0.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 50px; -fx-arc-width: 50px;" width="554.0">
          <effect>
             <DropShadow height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
@@ -131,18 +124,21 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Button fx:id="lanjut" layoutX="358.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #2ecc71; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Lanjut" textFill="WHITE">
+      <Button fx:id="lanjut" layoutX="358.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #2ecc71; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px;" text="Lanjut" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="20.0" />
          </font>
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <color>
+                  <Color red="0.19631409645080566" green="0.1381903886795044" blue="0.1381903886795044" />
+               </color></DropShadow>
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="keluar" layoutX="477.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #e74c3c; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Keluar" textFill="WHITE">
+      <Button fx:id="keluar" layoutX="477.0" layoutY="309.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: #e74c3c; -fx-arc-height: 25px; -fx-arc-width: 25px; -fx-background-radius: 10px;" text="Keluar" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="18.0" />
          </font>

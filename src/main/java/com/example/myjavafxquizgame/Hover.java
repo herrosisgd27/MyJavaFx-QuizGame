@@ -8,11 +8,10 @@ import javafx.scene.text.Text;
 
 public class Hover {
     static DropShadow shadow = new DropShadow();
-    //mmk
+
+    //Buat atur efek hover pada semua class Quiz
     public static void addHoverEffectQuiz(Button button1, Button button2, Button button3, Button button4, Circle bulat1, Circle bulat2, Circle bulat3, Circle bulat4, Text text1,Text text2,Text text3,Text text4) {
-
-
-
+        //button 1
         button1.setOnMouseEntered(e -> {
             button1.setEffect(shadow);
             bulat1.setFill(Paint.valueOf("#ffffff"));
@@ -24,24 +23,21 @@ public class Hover {
             bulat1.setFill(Paint.valueOf("#e74c3c"));
             text1.setFill(Paint.valueOf("#ffffff"));
             button1.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333; -fx-alignment: left center; -fx-text-overrun: ellipsis; -fx-wrap-text: true; ");
-
         });
-
+        //button 2
         button2.setOnMouseEntered(e -> {
             button2.setEffect(shadow);
             bulat2.setFill(Paint.valueOf("#ffffff"));
             text2.setFill(Paint.valueOf("#2ecc71"));
             button2.setStyle("-fx-background-color: #2ecc71; -fx-background-radius :  18px; -fx-border-radius :  18px; -fx-text-fill: #fffffff; -fx-alignment: left center; -fx-text-overrun: ellipsis; -fx-wrap-text: true; ");
-
         });
         button2.setOnMouseExited(e -> {
             button2.setEffect( shadow);
             bulat2.setFill(Paint.valueOf("#2ecc71"));
             text2.setFill(Paint.valueOf("#ffffff"));
             button2.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333; -fx-alignment: left center; -fx-text-overrun: ellipsis; -fx-wrap-text: true; ");
-
         });
-
+        //button 3
         button3.setOnMouseEntered(e -> {
             button3.setEffect(shadow);
             bulat3.setFill(Paint.valueOf("#ffffff"));
@@ -54,7 +50,7 @@ public class Hover {
             text3.setFill(Paint.valueOf("#ffffff"));
             button3.setStyle("-fx-background-color:  #fffffff; -fx-background-radius:  18px; -fx-border-radius:  18px; -fx-text-fill: #333333; -fx-alignment: left center; fx-text-overrun: ellipsis; -fx-wrap-text: true;");
         });
-
+        //button 4
         button4.setOnMouseEntered(e -> {
             button4.setEffect(shadow);
             bulat4.setFill(Paint.valueOf("#ffffff"));
@@ -70,9 +66,7 @@ public class Hover {
 
     }
 
-
-
-
+    //Buat atur efek hover pada class Kategori
     public static void addHoverEffectKategori(Button button1, Button button2, Button button3, Button button4, Circle bulat1, Circle bulat2, Circle bulat3, Circle bulat4) {
 
         //button 1
@@ -129,31 +123,25 @@ public class Hover {
         });
     }
 
+    //Buat atur efek hover pada class Result
     public void addHoverEffectResult(Button button1,Button button2){
+        //button Keluar
         button1.setOnMouseEntered(e -> {
             button1.setEffect(shadow);
-//            bulat1.setFill(Paint.valueOf("#ffffff"));
-//            text1.setFill(Paint.valueOf("#e74c3c"));
-            button1.setStyle("-fx-background-color: #fffffff; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #e74c3c; -fx-alignment: left center;");
+            button1.setStyle("-fx-background-color: #fffffff; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #e74c3c; -fx-alignment: center center;");
         });
         button1.setOnMouseExited(e -> {
             button1.setEffect( shadow);
-//            bulat1.setFill(Paint.valueOf("#e74c3c"));
-//            text1.setFill(Paint.valueOf("#ffffff"));
-            button1.setStyle("-fx-background-color:  #e74c3c; -fx-background-radius:  10px; -fx-border-radius:  10px; -fx-text-fill: #ffffff; -fx-alignment: left center;");
+            button1.setStyle("-fx-background-color:  #e74c3c; -fx-background-radius:  10px; -fx-border-radius:  10px; -fx-text-fill: #ffffff; -fx-alignment: center center;");
         });
-
+        //button keluar
         button2.setOnMouseEntered(e -> {
             button2.setEffect(shadow);
-//            bulat2.setFill(Paint.valueOf("#ffffff"));
-//            text2.setFill(Paint.valueOf("#2ecc71"));
-            button2.setStyle("-fx-background-color: #ffffff; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #2ecc71; -fx-alignment: left center;");
+            button2.setStyle("-fx-background-color: #ffffff; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #2ecc71; -fx-alignment: center center;");
         });
         button2.setOnMouseExited(e -> {
             button2.setEffect(shadow);
-//            bulat2.setFill(Paint.valueOf("#ffffff"));
-//            text2.setFill(Paint.valueOf("#2ecc71"));
-            button2.setStyle("-fx-background-color: #2ecc71; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #fffffff; -fx-alignment: left center;");
+            button2.setStyle("-fx-background-color: #2ecc71; -fx-background-radius :  10px; -fx-border-radius :  10px; -fx-text-fill: #fffffff; -fx-alignment: center center;");
         });
     }
 }

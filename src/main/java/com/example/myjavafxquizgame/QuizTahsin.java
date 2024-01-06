@@ -60,8 +60,6 @@ public class QuizTahsin extends Hover {
             nomor.setText(String.valueOf(counter));
             pertanyaan.setText(questions[index]);
 
-
-
             opt1.setText(options[index][0]);
             opt2.setText(options[index][1]);
             opt3.setText(options[index][2]);
@@ -70,7 +68,7 @@ public class QuizTahsin extends Hover {
         System.out.println(questions[index]);
         System.out.println(answers[index]);
         System.out.println(index);
-//        }
+
         System.out.println("ini benar : " + benar);
         System.out.println("ini salah : " + salah);
         System.out.println(counter);
@@ -91,7 +89,7 @@ public class QuizTahsin extends Hover {
         } else {
             // Lakukan logika untuk menampilkan hasil atau melakukan sesuatu setelah selesai menjawab pertanyaan terakhir
             try {
-//                counter++;
+
                 Stage thisstage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
                 thisstage.close();
 
@@ -153,7 +151,6 @@ public class QuizTahsin extends Hover {
         } else {
             salah += 1;
         }
-
         nextQuestion(actionEvent);
     }
 }
